@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>XSS Demo - Safe</title>
+</head>
+
+<body>
+  <h1>방명록 (XSS 방어 버전)</h1>
+  <form method="POST" action="/safe-comment">
+    <input type="text" name="content" />
+    <button type="submit">작성</button>
+  </form>
+
+  <ul>
+    <% comments.forEach(function(c) { %>
+      <li><%- escape(c) %></li>
+      <% }); %>
+  </ul>
+  <a href="/">취약 버전으로 돌아가기</a>
+</body>
+
+</html>

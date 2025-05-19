@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>XSS Demo</title>
+</head>
+
+<body>
+  <nav>
+    <a href="/">취약버전</a>
+    <a href="/safe">안전버전</a>
+  </nav>
+  <h1>방명록</h1>
+  <form method="POST" action="/comment">
+    <input type="text" name="content" />
+    <button type="submit">작성</button>
+  </form>
+
+  <ul>
+    <% comments.forEach(function(c) { %>
+      <li>
+        <%- c %>
+      </li> <!-- ✖️ 여기서 escape 안 됨! -->
+      <% }); %>
+  </ul>
+</body>
+
+</html>
