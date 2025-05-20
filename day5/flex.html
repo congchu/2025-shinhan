@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>position 예제</title>
+  <style>
+    .container {
+      display: flex;
+      /* Flex 컨테이너 선언 */
+      flex-direction: row;
+      /* 가로 방향 (기본값) */
+      justify-content: space-between;
+      /* 가로 정렬 */
+      align-items: center;
+      /* 세로 정렬 */
+      flex-wrap: wrap;
+      /* 줄바꿈 허용 */
+    }
+
+    .item {
+      width: 100px;
+      height: 100px;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      text-align: center;
+      line-height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container"> <!--← Flex Container-->
+    <div class="item">A</div>
+    <!--← Flex Item-->
+    <div class="item">B</div>
+    <div class="item">C</div>
+    <div class="item">D</div>
+    <div class="item">E</div>
+    <div class="item">F</div>
+    <div class="item">G</div>
+    <div class="item">H</div>
+    <!-- <div class="item">I</div>
+    <div class="item">J</div>
+    <div class="item">K</div>
+    <div class="item">L</div>
+    <div class="item">M</div> -->
+  </div>
+
+
+</body>
+
+</html>

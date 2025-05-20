@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>position 예제</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      height: 2000px;
+      /* 스크롤 확인용 */
+    }
+
+    .box {
+      width: 150px;
+      height: 100px;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    .static {
+      background-color: gray;
+      position: static;
+    }
+
+    .relative {
+      background-color: blue;
+      position: relative;
+      top: 20px;
+      left: 20px;
+    }
+
+    .absolute-container {
+      position: relative;
+      background-color: #eee;
+      padding: 30px;
+      margin-top: 20px;
+    }
+
+    .absolute {
+      background-color: red;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .fixed {
+      background-color: green;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+    }
+
+    .sticky-container {
+      height: 400px;
+      margin-top: 50px;
+    }
+
+    .sticky {
+      background-color: orange;
+      position: sticky;
+      top: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box static">static (기본값)</div>
+
+  <div class="box relative">relative (20px 이동)</div>
+
+  <div class="absolute-container">
+    <p>absolute 기준이 되는 부모</p>
+    <div class="box absolute">absolute (오른쪽 위에 붙음)</div>
+  </div>
+
+  <div class="box fixed">fixed (화면 오른쪽 아래 고정)</div>
+
+  <div class="sticky-container">
+    <div class="box sticky">sticky (스크롤 시 위에 붙음)</div>
+    <p>스크롤해서 sticky 동작을 확인해보세요.</p>
+    <p style="margin-top: 500px;">여기까지 스크롤해보면 sticky가 동작함</p>
+  </div>
+
+
+  <!-- <img src="https://cdn.pixabay.com/photo/2025/05/13/12/40/sailboat-9597523_1280.jpg"
+    style="float: left; width: 200px; margin-right: 10px;">
+  <p>이 텍스트는 이미지 오른쪽에 흘러들어갑니다.이 텍스트는 이미지 오른쪽에 흘러들어갑니다.이 텍스트는 이미지 오른쪽에 흘러들어갑니다.이 텍스트는 이미지 오른쪽에 흘러들어갑니다.이 텍스트는 이미지 오른쪽에
+    흘러들어갑니다.이 텍스트는 이미지 오른쪽에 흘러들어갑니다.이 텍스트는 이미지 오른쪽에 흘러들어갑니다.이 텍스트는 이미지 오른쪽에 흘러들어갑니다.이 텍스트는 이미지 오른쪽에 흘러들어갑니다.이 텍스트는 이미지
+    오른쪽에 흘러들어갑니다.이 텍스트는 이미지 오른쪽에 흘러들어갑니다.이 텍스트는 이미지 오른쪽에 흘러들어갑니다.이 텍스트는 이미지 오른쪽에 흘러들어갑니다.이 텍스트는 이미지 오른쪽에 흘러들어갑니다.이 텍스트는
+    이미지 오른쪽에 흘러들어갑니다.이 텍스트는 이미지 오른쪽에 흘러들어갑니다.이 텍스트는 이미지 오른쪽에 흘러들어갑니다.이 텍스트는 이미지 오른쪽에 흘러들어갑니다.이 텍스트는 이미지 오른쪽에 흘러들어갑니다.이
+    텍스트는 이미지 오른쪽에 흘러들어갑니다.이 텍스트는 이미지 오른쪽에 흘러들어갑니다.이 텍스트는 이미지 오른쪽에 흘러들어갑니다.이 텍스트는 이미지 오른쪽에 흘러들어갑니다.</p>
+
+  <div style="clear: both;"></div>
+ -->
+
+</body>
+
+</html>
