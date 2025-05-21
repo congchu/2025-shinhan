@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Grid 제품 목록 예시</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 40px;
+      background: #f4f4f4;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 한 줄에 4개 */
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      font-weight: bold;
+    }
+
+    @media (max-width: 1024px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 태블릿 */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid-container {
+        grid-template-columns: 1fr; /* 모바일: 한 줄에 1개 */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>상품 목록</h1>
+  <div class="grid-container">
+    <div class="card">제품 1</div>
+    <div class="card">제품 2</div>
+    <div class="card">제품 3</div>
+    <div class="card">제품 4</div>
+    <div class="card">제품 5</div>
+    <div class="card">제품 6</div>
+    <div class="card">제품 7</div>
+    <div class="card">제품 8</div>
+    <div class="card">제품 9</div>
+  </div>
+
+</body>
+</html>
