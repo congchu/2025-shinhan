@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>가상 속성 실전 예제</title>
+  <style>
+    body {
+      font-family: 'Pretendard', sans-serif;
+      padding: 2rem;
+      background: #f7f7f7;
+      line-height: 1.6;
+    }
+
+    /* 1. ::before - 뱃지 */
+    .badge::before {
+      content: "🔥";
+      margin-right: 0.5rem;
+    }
+
+    /* 2. ::after - 화살표 */
+    .more-link::after {
+      content: " →";
+      color: #4e6eff;
+    }
+
+    /* 3. :hover - 버튼 */
+    .btn {
+      padding: 0.5rem 1rem;
+      background: #4e6eff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+
+    /* 5. ::first-letter - 강조 */
+    .headline::first-letter {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ff715b;
+    }
+
+    /* 6. :checked + ::after - 체크시 텍스트 뒤 이모지 */
+    .toggle-label {
+      display: block;
+      margin-top: 1.5rem;
+      font-weight: bold;
+    }
+
+    input[type="checkbox"]:checked+.check-result::after {
+      content: " ✅ 선택됨!";
+      color: green;
+      margin-left: 0.5rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2 class="headline">1. 가상 요소 ::before</h2>
+  <p class="badge">인기 콘텐츠</p>
+
+  <h2 class="headline">2. 가상 요소 ::after</h2>
+  <a href="#" class="more-link">더 알아보기</a>
+
+  <h2 class="headline">3. 가상 요소 ::first-letter</h2>
+  <p class="headline">이 문장은 첫 글자만 강조됩니다.</p>
+
+  <h2 class="headline">4. :checked + ::after 활용</h2>
+  <label class="toggle-label">
+    <input type="checkbox" />
+    <span class="check-result">옵션을 선택하세요</span>
+  </label>
+
+</body>
+
+</html>
