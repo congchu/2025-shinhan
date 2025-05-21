@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>box-sizing 비교</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      background: #f8f8f8;
+    }
+
+    .container {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .box {
+      width: 200px;
+      padding: 20px;
+      border: 5px solid black;
+      background-color: lightgray;
+      color: black;
+    }
+
+    .content-box {
+      box-sizing: content-box;
+      background-color: #ffe5e5;
+      margin: 10px;
+    }
+
+    .border-box {
+      box-sizing: border-box;
+      background-color: #e5f0ff;
+      margin: 10px;
+    }
+
+    .label {
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🔍 box-sizing: content-box vs border-box</h2>
+
+  <div class="container">
+    <div>
+      <div class="label">content-box</div>
+      <div class="box content-box">
+        콘텐츠 영역 기준으로 width: 200px
+      </div>
+    </div>
+
+    <div>
+      <div class="label">border-box</div>
+      <div class="box border-box">
+        전체 박스 기준으로 width: 200px
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

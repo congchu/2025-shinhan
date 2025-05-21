@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>가운데 정렬 + max-width 레이아웃</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    /* 💡 핵심: 전체 콘텐츠 래퍼 */
+    .container {
+      width: 100%;
+      min-width: 280px;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      box-sizing: border-box;
+      
+    }
+
+    h1 {
+      text-align: center;
+      color: #4e6eff;
+    }
+
+    p {
+        padding: 20px;
+    }
+
+    *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>가운데 정렬된 콘텐츠</h1>
+    <p>
+      이 영역은 화면이 작을 땐 꽉 차지만, 화면이 커지면 최대 960px까지만 넓어집니다.<br>
+      이렇게 하면 너무 넓은 화면에서 글을 읽기 어렵지 않고, 적당한 가독성을 유지할 수 있습니다.
+    </p>
+    <p>
+      `max-width`는 **너무 넓어지는 것을 막기 위한 상한선**이고,<br>
+      `margin: 0 auto`는 **양쪽 마진을 동일하게 줘서 가운데 정렬**을 만듭니다.
+    </p>
+  </div>
+
+</body>
+</html>

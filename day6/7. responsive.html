@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>미디어 쿼리 조건 예제</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+      background: gray;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    /* 1. 모든 디바이스 + 너비 768 이상 AND 1080 이하 */
+    @media all and (min-width: 768px) and (max-width: 1080px) {
+      .box {
+        background: #4e6eff;
+        content: "768~1080px 사이입니다.";
+      }
+      .box::before {
+        content: "📘 768 ~ 1080px 구간";
+      }
+    }
+
+    /* 2. 높이 680 이상 OR 세로 모드인 screen */
+    @media (min-height: 680px), screen and (orientation: portrait) {
+      .box {
+        background: #36b37e;
+      }
+      .box::before {
+        content: "📗 높이 ≥ 680px 또는 세로 모드";
+      }
+    }
+
+    /* 3. 너비 600 이하 */
+    @media screen and (max-width: 600px) {
+      .box {
+        background: #ff715b;
+      }
+      .box::before {
+        content: "📕 너비 ≤ 600px";
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    기본 상태입니다.
+  </div>
+
+</body>
+</html>

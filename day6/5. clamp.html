@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clamp Demo</title>
+  <style>
+    :root {
+      --primary-color: #4e6eff;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      padding: clamp(1rem, 5vw, 3rem);
+    }
+
+    h1 {
+      font-size: clamp(1.5rem, 6vw, 3rem);
+      margin-bottom: clamp(0.5rem, 2vw, 1.5rem);
+      text-align: center;
+    }
+
+    .card {
+      background: white;
+      border-radius: clamp(8px, 2vw, 20px);
+      padding: clamp(1rem, 3vw, 2rem);
+      max-width: clamp(280px, 50vw, 600px);
+      margin: 0 auto;
+      box-shadow: 0 0 clamp(4px, 1vw, 12px) rgba(0, 0, 0, 0.1);
+    }
+
+    .card p {
+      font-size: clamp(0.875rem, 2vw, 1.25rem);
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: clamp(0.5rem, 1vw, 1rem) clamp(1rem, 3vw, 2rem);
+      font-size: clamp(0.875rem, 2vw, 1.25rem);
+      border: none;
+      border-radius: clamp(6px, 1vw, 12px);
+      background-color: var(--primary-color);
+      color: white;
+      cursor: pointer;
+      margin-top: clamp(1rem, 4vw, 2rem);
+    }
+
+    .btn:hover {
+      background-color: darkblue;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Responsive with Clamp</h1>
+
+  <div class="card">
+    <p>
+      이 카드는 clamp()를 사용해 다양한 속성의 크기가 화면 크기에 따라 유동적으로 변합니다.
+      작은 화면에선 작게, 큰 화면에선 시원시원하게 보여요!
+    </p>
+    <button class="btn">더 알아보기</button>
+  </div>
+
+</body>
+
+</html>

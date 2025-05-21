@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>가상 클래스 예제</title>
+  <style>
+    body {
+      font-family: 'Pretendard', sans-serif;
+      background-color: #f4f4f4;
+      padding: 2rem;
+    }
+
+    /* 1. :hover - 버튼에 마우스를 올렸을 때 */
+    .hover-btn {
+      padding: 0.6rem 1.2rem;
+      background-color: #4e6eff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .hover-btn:hover {
+      background-color: #2f4bd6;
+    }
+
+    /* 2. :focus - 입력창에 포커스됐을 때 */
+    .input {
+      padding: 0.5rem;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .input:focus {
+      border-color: #4e6eff;
+    }
+
+    /* 3. :nth-child - 리스트의 짝수 항목 강조 */
+    ul li:nth-child(even) {
+      background-color: #e6f0ff;
+    }
+
+    /* 4. :checked - 체크된 상태일 때 텍스트 색상 변경 */
+    .toggle-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+    }
+
+    input[type="checkbox"]:checked+span {
+      color: green;
+      font-weight: bold;
+    }
+
+    /* 5. :disabled - 비활성화된 버튼 스타일 */
+    .disabled-btn:disabled {
+      background-color: #ccc;
+      color: #666;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>:hover</h2>
+  <button class="hover-btn">마우스를 올려보세요</button>
+
+  <h2>:focus</h2>
+  <input class="input" type="text" placeholder="클릭해보세요" />
+
+  <h2>:nth-child</h2>
+  <ul>
+    <li>항목 1</li>
+    <li>항목 2</li>
+    <li>항목 3</li>
+    <li>항목 4</li>
+  </ul>
+
+  <h2>:checked</h2>
+  <label class="toggle-label">
+    <input type="checkbox" />
+    <span>체크하면 초록색으로!</span>
+  </label>
+
+  <h2>:disabled</h2>
+  <button class="hover-btn disabled-btn" disabled>비활성화된 버튼</button>
+
+</body>
+
+</html>
